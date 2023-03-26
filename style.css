@@ -55,3 +55,15 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#canvas {
+  height: 100%;
+  width: 100%;
+  border: 2rem solid slategray;
+}
