@@ -57,13 +57,14 @@ body {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
 }
 
+h2 {
+  margin-left: 1rem;
+}
 #canvas {
-  height: 100%;
-  width: 100%;
-  border: 2rem solid slategray;
+  border: 1px solid slategray;
+  height: auto;
+  width: 100vw;
 }

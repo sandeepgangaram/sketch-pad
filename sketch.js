@@ -33,3 +33,8 @@ tool.onMouseUp = function (event) {
   // Simplify the path
   path.simplify(10);
 };
+
+var text = new PointText(new Point(500, 500));
+text.justification = "center";
+text.fillColor = "black";
+text.content = "The contents of the point text";
