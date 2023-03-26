@@ -44,14 +44,13 @@ function downloadCanvas() {
   var pdf = new jsPDF({
     orientation: "l",
     unit: "px",
-    format: "a3",
+    format: [canvas.width, canvas.height],
   });
 
   var canvasDataURL = canvas.toDataURL("image/png");
-  // Add the canvas image to the PDF\
-  console.log(canvas);
+
   pdf.addImage(canvasDataURL, "PNG", 0, 0, canvas.width, canvas.height);
 
   // Save the PDF
-  pdf.save("canvas.pdf");
+  pdf.save("new_canvas.pdf");
 }
