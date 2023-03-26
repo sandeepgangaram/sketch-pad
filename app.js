@@ -34,7 +34,24 @@ tool.onMouseUp = function (event) {
   path.simplify(10);
 };
 
-var text = new PointText(new Point(500, 500));
-text.justification = "center";
-text.fillColor = "black";
-text.content = "The contents of the point text";
+//Logic to download canvas as PDF
+
+const download = document.getElementById("download");
+
+download.addEventListener("click", downloadCanvas);
+
+function downloadCanvas() {
+  var pdf = new jsPDF({
+    orientation: "l",
+    unit: "px",
+    format: "a3",
+  });
+
+  var canvasDataURL = canvas.toDataURL("image/png");
+  // Add the canvas image to the PDF\
+  console.log(canvas);
+  pdf.addImage(canvasDataURL, "PNG", 0, 0, canvas.width, canvas.height);
+
+  // Save the PDF
+  pdf.save("canvas.pdf");
+}
