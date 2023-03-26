@@ -44,7 +44,7 @@ function downloadCanvas() {
   var pdf = new jsPDF({
     orientation: "l",
     unit: "px",
-    format: [canvas.width, canvas.height],
+    format: [canvas.width, canvas.height - 100],
   });
 
   var canvasDataURL = canvas.toDataURL("image/png");
